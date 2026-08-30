@@ -610,12 +610,21 @@ img {
   font-weight: 600;
 }
 
-/* Hero Visual / Avatar Card com a Foto Evelin */
 .hero-visual {
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.hero-visual img {
+  width: 260px;        /* ajuste o tamanho do círculo */
+  height: 260px;        /* mantenha igual à width para ficar redondo */
+  aspect-ratio: 1 / 1;   /* garante proporção quadrada mesmo se width/height variarem */
+  object-fit: cover;     /* corta a imagem mantendo proporção, sem distorcer */
+  object-position: center top; /* ajusta o foco do recorte (ex: mostrar mais o rosto) */
+  border-radius: 50%;    /* deixa redondo */
+  border: 3px solid #C9A24B; /* a borda dourada que aparece no seu design */
 }
 
 .hero-card-frame {
